@@ -7,15 +7,29 @@ body {
   overflow-x: hidden;
   font-family: "Space Grotesk", sans-serif;
   background-color: #190b1f;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
 }
 
 h2 {
-  @apply text-xl md:text-4xl
+  @apply text-xl md:text-4xl lg:text-5xl; /* Menambah ukuran lebih besar untuk desktop */
 }
 
 p {
-  @apply text-xl tracking-tight leading-relaxed
+  @apply text-lg md:text-xl tracking-tight leading-relaxed; /* Mengurangi ukuran teks pada layar kecil */
 }
+
 
 /* untuk merubah teks contact about me */
 span {
@@ -29,9 +43,38 @@ span {
   pointer-events: none;
   z-index: 1;
   background: radial-gradient(circle, rgba(178, 19, 202, 0.2), transparent 70%);
+  width: 200px;
+  height: 200px;
 }
+
+@media (max-width: 768px) {
+  .shiny-effect {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shiny-effect {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
 /* untuk merubah button contact */
 .bg-primary-color {
-    @apply bg-purple-600 
+  @apply bg-purple-600;
+}
+
+@media (max-width: 768px) {
+  .bg-primary-color {
+    @apply bg-purple-500;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-primary-color {
+    @apply bg-purple-400;
+  }
 }
