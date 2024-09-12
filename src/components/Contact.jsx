@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
@@ -10,6 +10,11 @@ const Contact = () => {
     email: '',
     message: ''
   });
+
+  // Referensi untuk input
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
 
   // Fungsi untuk menghapus placeholder dan isi input
   const handleFocus = (e) => {
@@ -87,7 +92,7 @@ const Contact = () => {
               id="form"
             >
               <p className="text-gray-100 font-bold text-xl mb-2">
-                Let´s connect!
+                Let’s connect!
               </p>
               <input
                 type="text"
@@ -96,11 +101,13 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
-                data-placeholder="Your Name ..." // Simpan placeholder untuk di-recover
+                data-placeholder="Your Name ..."
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onChange={handleChange}
+                ref={nameRef}
                 required
+                aria-label="Name"
               />
               <input
                 type="email"
@@ -109,11 +116,13 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
-                data-placeholder="Your Email ..." // Simpan placeholder untuk di-recover
+                data-placeholder="Your Email ..."
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onChange={handleChange}
+                ref={emailRef}
                 required
+                aria-label="Email"
               />
               <textarea
                 name="message"
@@ -126,7 +135,9 @@ const Contact = () => {
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onChange={handleChange}
+                ref={messageRef}
                 required
+                aria-label="Message"
               />
               <button
                 type="submit"

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Ini sudah memastikan konten di tengah vertikal */
+  justify-content: center; /* Memastikan konten di tengah vertikal */
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -11,30 +11,28 @@
   min-height: 100vh; /* Menjamin #root mengambil seluruh tinggi layar */
 }
 
-
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #root {
-    padding: 1.5rem;
+    padding: 1rem; /* Padding di tablet */
+    text-align: center; /* Pastikan teks di tengah */
   }
 }
 
+
 @media (max-width: 768px) {
   #root {
-    padding: 1rem;
-    flex-direction: column;
-    text-align: center;
+    padding: 1rem; /* Padding di tablet */
+    text-align: center; /* Pastikan teks di tengah */
   }
 }
 
 @media (max-width: 480px) {
   #root {
     padding: 0.5rem;
-    flex-direction: column;
   }
 }
 
-/* logo */
-
+/* Logo styling */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -43,21 +41,22 @@
 }
 
 @media (max-width: 768px) {
-  #root {
-    padding: 1rem;
+  .logo {
+    height: 5em;
   }
 }
+
 
 @media (max-width: 480px) {
-  #root {
-    padding: 0.5rem;
+  .logo {
+    height: 4em;
   }
 }
-
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -83,6 +82,7 @@
   }
 }
 
+/* Heading styling */
 h2 {
   font-size: 2rem; /* Default untuk desktop */
 }
@@ -99,7 +99,7 @@ h2 {
   }
 }
 
-
+/* Card styling */
 .card {
   padding: 2em;
 }
@@ -124,6 +124,7 @@ h2 {
   }
 }
 
+/* Additional styling */
 .read-the-docs {
   color: #888;
 }

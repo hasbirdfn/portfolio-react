@@ -10,6 +10,7 @@ body {
   padding: 0;
 }
 
+/* Responsiveness for padding */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
@@ -22,21 +23,22 @@ body {
   }
 }
 
+/* Heading styling */
 h2 {
   @apply text-xl md:text-4xl lg:text-5xl; /* Menambah ukuran lebih besar untuk desktop */
 }
 
+/* Paragraph styling */
 p {
   @apply text-lg md:text-xl tracking-tight leading-relaxed; /* Mengurangi ukuran teks pada layar kecil */
 }
 
-
-/* untuk merubah teks contact about me */
+/* Custom span styling for contact/about me */
 span {
-  @apply text-purple-600
+  @apply text-purple-600;
 }
 
-
+/* Shiny effect styling */
 .shiny-effect {
   position: absolute;
   border-radius: 50%;
@@ -61,8 +63,7 @@ span {
   }
 }
 
-
-/* untuk merubah button contact */
+/* Primary color button styling */
 .bg-primary-color {
   @apply bg-purple-600;
 }
