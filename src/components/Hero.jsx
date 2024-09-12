@@ -32,8 +32,6 @@ const Hero = () => {
         >
           <TypeAnimation
             sequence={[
-              "Fullstack Developer",
-              1000,
               "Frontend Developer",
               1000,
               "Backend Developer",
@@ -62,7 +60,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1 }}
             className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
           >
-            I am a passionate Fullstack developer with over 1 years of experience.
+            I am build things for Frontend and Backend
           </motion.p>
 
           <motion.div
