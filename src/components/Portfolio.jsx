@@ -24,7 +24,7 @@ const projects = [
     title: "Project #2",
     description: "Building a landing page for a software house company using React, Tailwind, AOS technologies.",
     links: {
-      site: "#",
+      site: "https://agency-ashen-rho.vercel.app/",
       github: "https://github.com/hasbirdfn/agency_project",
     },
   },
