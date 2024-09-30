@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <div
       className="mt-24 max-w-[1200px] mx-auto relative px-4 md:px-0" // Tambahkan px-4 untuk padding di layar kecil
-      onMouseMove={handleMouseMove}
+      onMouseMove={handleMouseMove} id="hero"
     >
       <div className="grid md:grid-cols-2 place-items-center gap-8 px-4 md:px-0"> {/* Tambahkan px-4 untuk layar kecil */}
         {/* Bagian Teks */}

@@ -46,6 +46,7 @@ const Navbar = () => {
       
             {/* Menu List */}
             <ul className='hidden md:flex gap-12 z-10 cursor-pointer'>
+              <li><Link to="hero" smooth={true} offset={50} duration={500}>Beranda</Link></li>
               <li><Link to="skills" smooth={true} offset={50} duration={500}>Skills</Link></li>
               <li><Link to="portfolio" smooth={true} offset={50} duration={500}>Portfolio</Link></li>
               <li><Link to="experience" smooth={true} offset={50} duration={500}>Experience</Link></li>
@@ -62,10 +63,11 @@ const Navbar = () => {
               initial={false}
               animate={nav ? 'open' : 'closed'}
               variants={menuVariants}
-              className='fixed left-0 top-0 w-full min-h-screen bg-gray-900 z-40'
+              className='fixed right-0 top-0 w-full min-h-screen bg-purple-900  z-40'
             >
               <ul className='font-semibold text-4xl space-y-8 mt-24 text-center'>
-                <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>About</Link></li>
+                <li><Link to="hero" onClick={closeNav} smooth={true} offset={50} duration={500}>Beranda</Link></li>
+                <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>Skills</Link></li>
                 <li><Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>Portfolio</Link></li>
                 <li><Link to="experience" onClick={closeNav} smooth={true} offset={50} duration={500}>Experience</Link></li>
                 <li><Link to="contact" onClick={closeNav} smooth={true} offset={50} duration={500}>Contact</Link></li>

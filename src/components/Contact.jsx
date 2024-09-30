@@ -48,7 +48,7 @@ const Contact = () => {
                 </h3>
                 <p className="text-justify leading-7 mx-auto">
                   Fresh graduate Web Developer dedicated to impactful web
-                  applications. With strong Full Stack Developer. I strive to
+                  applications. With strong Front End Developer. I strive to
                   deliver solutions that prioritize user experience and
                   accessibility. I enjoy learning from others and continuously
                   improving my skills.

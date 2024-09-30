@@ -82,7 +82,7 @@ const Portfolio = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
         {projects.map((project, index) => (
           <Reveal key={index}>
-            <div className='bg-purple-700/10 rounded-lg shadow-lg overflow-hidden flex flex-col'>
+            <div className='bg-purple-700/10 rounded-lg shadow-xl overflow-hidden flex flex-col'>
               <img
                 src={project.img}
                 alt={project.title}
