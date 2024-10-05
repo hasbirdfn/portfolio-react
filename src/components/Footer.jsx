@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp, FaGithubSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa'; // Tambah FaWhatsapp
+import { FaArrowCircleUp, FaGithubSquare, FaInstagram} from 'react-icons/fa'; // Tambah FaWhatsapp
 import { motion } from 'framer-motion'; // Import framer-motion untuk animasi
 import hasbcodelogo from '../assets/hasbcodelogo.png'; // Import gambar
 
@@ -88,16 +88,6 @@ const Footer = () => {
           variants={iconVariants}
           className="fixed right-10 bottom-10 flex flex-col items-center space-y-4"
         >
-          {/* Tombol WhatsApp */}
-          <a
-            href="https://wa.me/6285795501902" // Ganti dengan nomor WA yang benar
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="text-5xl text-green-500 cursor-pointer hover:text-green-400 transition-colors duration-300"
-          >
-            <FaWhatsapp />
-          </a>
 
           {/* Tombol Scroll to Top */}
           <FaArrowCircleUp 
