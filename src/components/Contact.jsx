@@ -4,31 +4,26 @@ import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 const Contact = () => {
-  // State untuk mengontrol input
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
-  // Referensi untuk input
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
 
-  // Fungsi untuk menghapus placeholder dan isi input
   const handleFocus = (e) => {
-    e.target.placeholder = ''; // Menghapus placeholder
+    e.target.placeholder = '';
   };
 
-  // Fungsi untuk mengembalikan placeholder jika input kosong
   const handleBlur = (e) => {
     if (e.target.value === '') {
-      e.target.placeholder = e.target.dataset.placeholder; // Mengembalikan placeholder sesuai data-placeholder
+      e.target.placeholder = e.target.dataset.placeholder;
     }
   };
 
-  // Fungsi untuk menangani perubahan input
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -41,7 +36,7 @@ const Contact = () => {
       <Reveal>
         <div className="border border-gray-700 rounded-lg shadow-lg p-6 md:p-12 bg-purple-700/10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
-            <div>
+            <div className="text-center md:text-left">
               <div className="text-gray-300 my-3">
                 <h3 className="text-4xl font-semibold mb-5">
                   About <span>Me</span>
@@ -67,10 +62,10 @@ const Contact = () => {
 
                 <div className="bg-gray-800/40 p-4 rounded-lg text-center">
                   <h3 className="md:text-4xl text-2xl font-semibold text-white">
-                    1 
+                    1
                   </h3>
                   <p className="text-xs md:text-base">
-                    <span>years of experience</span>
+                    <span>year of experience</span>
                   </p>
                 </div>
 
@@ -91,7 +86,7 @@ const Contact = () => {
               className="max-w-md w-full p-5 md:p-12"
               id="form"
             >
-              <p className="text-gray-100 font-bold text-xl mb-2">
+              <p className="text-gray-100 font-bold text-xl mb-2 text-center">
                 Let’s connect!
               </p>
               <input
@@ -141,7 +136,7 @@ const Contact = () => {
               />
               <button
                 type="submit"
-                className="w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color"
+                className="w-full py-3 rounded-md text-gray-100 font-semibold text-xl bg-primary-color hover:bg-purple-600 transition duration-300"
               >
                 Send Message
               </button>

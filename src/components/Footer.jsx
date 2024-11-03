@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp, FaGithubSquare, FaInstagram} from 'react-icons/fa'; // Tambah FaWhatsapp
+import { FaArrowCircleUp, FaGithubSquare, FaInstagram } from 'react-icons/fa'; // Tambah FaWhatsapp
 import { motion } from 'framer-motion'; // Import framer-motion untuk animasi
 import hasbcodelogo from '../assets/hasbcodelogo.png'; // Import gambar
 
@@ -55,7 +55,7 @@ const Footer = () => {
         </a>
 
         {/* Ikon Sosial Media di sebelah kanan */}
-        <div className='flex flex-row gap-6 text-gray-400 text-4xl'>
+        <div className='flex flex-row gap-6 text-gray-400 text-4xl justify-center md:justify-end'>
           <a 
             href="https://github.com/hasbirdfn" 
             target="_blank" 
@@ -88,7 +88,6 @@ const Footer = () => {
           variants={iconVariants}
           className="fixed right-10 bottom-10 flex flex-col items-center space-y-4"
         >
-
           {/* Tombol Scroll to Top */}
           <FaArrowCircleUp 
             className="text-5xl text-gray-400 cursor-pointer hover:text-gray-300 transition-colors duration-300"

@@ -40,17 +40,16 @@ const projects = [
   {
     img: project4,
     title: "Project #4",
-    description: "Building a consulting company gps attendance application using PHP, Laravel, MySQL technology.",
+    description: "Building a consulting company GPS attendance application using PHP, Laravel, MySQL technology.",
     links: {
       site: "#",
       github: "https://github.com/hasbirdfn/Absensi-GPS",
-      
     },
   },
   {
     img: project5,
     title: "Project #5",
-    description: "Building an IT company HRIS application using PHP, Codeigniter, MySQL, Json technology",
+    description: "Building an IT company HRIS application using PHP, Codeigniter, MySQL, JSON technology",
     links: {
       site: "#",
       github: "https://github.com/hasbirdfn/teamhris",
@@ -59,7 +58,7 @@ const projects = [
   {
     img: project6,
     title: "Project #6",
-    description: "Build a movie taking application using API, javascript technology.",
+    description: "Building a movie application using API and JavaScript technology.",
     links: {
       site: "#",
       github: "https://github.com/hasbirdfn/Javascript_API",
@@ -68,7 +67,7 @@ const projects = [
   {
     img: project7,
     title: "Project #7",
-    description: "Building a landing page application based on an SEO consulting company website, using Wordpress technology",
+    description: "Building a landing page for an SEO consulting company, using WordPress technology.",
     links: {
       site: "https://spkonsultan.com/",
     },
@@ -82,34 +81,36 @@ const Portfolio = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
         {projects.map((project, index) => (
           <Reveal key={index}>
-            <div className='bg-purple-700/10 rounded-lg shadow-xl overflow-hidden flex flex-col'>
+            <div className='bg-purple-700/10 rounded-lg shadow-xl overflow-hidden flex flex-col transition-transform transform hover:scale-105'>
               <img
                 src={project.img}
                 alt={project.title}
-                className='w-full cursor-pointer h-128 object-cover' // Atur tinggi gambar
+                className='w-full h-60 object-cover hover:opacity-90 transition duration-300 cursor-pointer'
               />
               <div className='flex-1 p-4'>
                 <h3 className='text-2xl font-semibold text-gray-200 mb-2'>{project.title}</h3>
-                
                 <p className='text-gray-300 mb-4'>{project.description}</p>
                 <div className='flex justify-center space-x-4'>
-                  <a
-                    href={project.links.site}
-                    className='px-4 py-2  bg-purple-600 text-gray-200 rounded-lg hover:bg-purple-700 transition duration-300'
-                    target="_blank" // Membuka di tab baru
-                    rel="noopener noreferrer" // Untuk keamanan
-
-                  >
-                    View Site
-                  </a>
-                  <a
-                    href={project.links.github}
-                    className='px-4 py-2 bg-gray-600 text-gray-200 rounded-lg hover:bg-gray-700 transition duration-300'
-                    target="_blank" // Membuka di tab baru
-                    rel="noopener noreferrer" // Untuk keamanan
-                 >
-                    <AiOutlineGithub />
-                  </a>
+                  {project.links.site && (
+                    <a
+                      href={project.links.site}
+                      className='px-4 py-2 bg-purple-600 text-gray-200 rounded-lg hover:bg-purple-700 transition duration-300'
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Site
+                    </a>
+                  )}
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      className='px-4 py-2 bg-gray-600 text-gray-200 rounded-lg hover:bg-gray-700 transition duration-300 flex items-center'
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiOutlineGithub className="text-2xl" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
