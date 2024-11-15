@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <div
-      className="mt-24 max-w-screen-lg mx-auto relative px-4 md:px-0" // Batasi lebar maksimum untuk menjaga konten tetap di tengah
+      className="mt-24 max-w-[1200px] mx-auto relative px-4 md:px-0" // Tambahkan px-4 untuk padding di layar kecil
       onMouseMove={handleMouseMove} id="hero"
     >
       <div className="grid md:grid-cols-2 place-items-center gap-8 px-4 md:px-0"> {/* Tambahkan px-4 untuk layar kecil */}
@@ -79,7 +79,7 @@ const Hero = () => {
               }}
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-purple-400 rounded-xl"
             >
-              CV
+               CV
             </motion.a>
 
             <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
