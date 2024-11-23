@@ -2,13 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
   overflow-x: hidden;
   font-family: "Space Grotesk", sans-serif;
-  background-color: #190b1f;
+  background-color: #190b1f; /* Latar belakang utama */
   padding: 0;
+
+  /* Pola kotak-kotak dengan kontras lebih tinggi */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px), /* Garis horizontal dengan kontras lebih tinggi */
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px); /* Garis vertikal dengan kontras lebih tinggi */
+  background-size: 40px 40px; /* Ukuran kotak */
+  background-blend-mode: overlay; /* Gabungkan pola dengan latar belakang */
 }
+
+
 
 /* Responsiveness for padding */
 @media (max-width: 768px) {

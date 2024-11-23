@@ -1,5 +1,5 @@
 import React from "react";
-import profilepic from "../assets/profpic.png";
+import profilepic from "../assets/profpic.jpeg";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import HeroBgAnimation from "../components/HeroBgAnimation";
@@ -23,6 +23,7 @@ const Hero = () => {
       onMouseMove={handleMouseMove} id="hero"
     >
       <div className="grid md:grid-cols-2 place-items-center gap-8 px-4 md:px-0"> {/* Tambahkan px-4 untuk layar kecil */}
+       
         {/* Bagian Teks */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -30,6 +31,15 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
+          {/* hire me */}
+       <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-gray-200 md:text-lg text-lg text-purple-500 tracking-tight mb-4"
+          ><span className="animate-pulse-slow"></span>Hire Me<br />
+          </motion.p>
           <TypeAnimation
             sequence={[
               "Frontend Developer",
@@ -47,10 +57,10 @@ const Hero = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-gray-200 md:text-7xl text-5xl tracking-tight mb-4"
+            className="text-gray-200 md:text-6xl text-4xl tracking-tight mb-4"
           >
-            HEY, I AM <br />
-            <span className="text-purple-500">Hasbi Radifan L</span>
+            HELLO, I AM <br />
+            <span className="text-purple-500 md:text-4xl text-3xl">Hasbi Radifan L</span>
           </motion.p>
 
           <motion.p
@@ -140,10 +150,10 @@ const Hero = () => {
 
       {/* Tech Stack */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 2 }}
+        transition={{ duration: 1 }}
         className="flex flex-row text-7xl w-full justify-center items-center py-24 px-4 md:px-12" // Sesuaikan padding di sini
       >
         <p className="text-gray-200 mr-6">My Tech Stack</p>
@@ -154,10 +164,7 @@ const Hero = () => {
         <DiNodejsSmall className="text-green-500 mx-2" />
       </motion.div>
 
-      {/* Efek Shiny */}
-      <div className="absolute inset-0 hidden md:block">
-        <ShinyEffect left={0} top={0} size={1400} />
-      </div>
+     
     </div>
   );
 };
