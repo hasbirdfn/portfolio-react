@@ -61,10 +61,6 @@ const Skills = () => {
     <div className="max-w-[650px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
       <Reveal>
         <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
-        <p className="text-center mb-8">
-          I worked on various Front-end and Back-end projects.
-        </p>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
           {skills.map((skill, index) => (
             <div key={index} className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg w-full">

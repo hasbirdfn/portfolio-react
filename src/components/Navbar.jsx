@@ -1,13 +1,11 @@
-import React, { useState,useContext } from 'react'
+import React, { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import hasbcodelogo from "../assets/hasbcodelogo.png"; // Import gambar
-import { FaSun, FaMoon } from "react-icons/fa";
-import { DarkMode } from "../context/DarkMode";
+
 const Navbar = () => {
     const [nav, setNav] = useState(false)
-    const { isDarkMode, setIsDarkMode } = useContext(DarkMode);
     const toggleNav = () => {
         setNav(!nav)
     }
@@ -52,16 +50,6 @@ const Navbar = () => {
                     <li><Link to="portfolio" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Portfolio</Link></li>
                     <li><Link to="experience" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Experience</Link></li>
                     <li><Link to="contact" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Contact</Link></li>
-                    <li>    <button
-          className="p-2 text-white rounded"
-          onClick={() => setIsDarkMode(!isDarkMode)}
-        >
-          {isDarkMode ? (
-            <FaSun size={24} className="text-yellow-500" />
-          ) : (
-            <FaMoon size={24} className="text-gray-900" />
-          )}
-        </button></li>
                 </ul>
 
                 {/* Mobile Menu Icon */}

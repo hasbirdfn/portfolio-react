@@ -74,7 +74,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1 }}
             className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
           >
-            I am build things for Frontend and Backend
+         Building intuitive and efficient frontend solutions for modern web applications
           </motion.p>
 
           <motion.div
