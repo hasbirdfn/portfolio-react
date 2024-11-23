@@ -58,14 +58,14 @@ const Skills = () => {
   };
 
   return (
-    <div className="max-w-[650px] mx-auto flex flex-col justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
+    <div className="max-w-[650px] mx-auto flex justify-center px-4 text-gray-200 pb-8 md:py-12" id="skills">
       <Reveal>
         <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 justify-center items-center mx-auto"> {/* Centering grid */}
           {skills.map((skill, index) => (
-            <div key={index} className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg w-full">
+            <div key={index} className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg w-full flex flex-col items-center"> {/* Centering card content */}
               <h3 className="text-xl font-bold mb-4 text-center">{skill.category}</h3>
-              <div className="grid grid-cols-2 gap-4 justify-center">
+              <div className="grid grid-cols-2 gap-4 justify-center items-center"> {/* Centering technology icons */}
                 {skill.technologies.map((tech, idx) => (
                   <div
                     key={idx}
@@ -74,9 +74,7 @@ const Skills = () => {
                     onMouseLeave={() => handleMouseLeave(skill.category)}
                   >
                     <div
-                      className={`text-3xl ${
-                        hoveredIcon[skill.category] === idx ? tech.color : "text-gray-500"
-                      } transition duration-300`}
+                      className={`text-3xl ${hoveredIcon[skill.category] === idx ? tech.color : "text-gray-500"} transition duration-300`}
                     >
                       {tech.icon}
                     </div>
