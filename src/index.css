@@ -16,6 +16,24 @@ body {
   background-blend-mode: overlay; /* Gabungkan pola dengan latar belakang */
 }
 
+@keyframes pulse-circle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+.pulse-circle {
+  width: 10px; /* Ukuran bulatan */
+  height: 10px;
+  background-color: #22c55e; /* Warna hijau Tailwind */
+  border-radius: 50%;
+  animation: pulse-circle 1.5s infinite; /* Durasi animasi */
+}
 
 
 /* Responsiveness for padding */

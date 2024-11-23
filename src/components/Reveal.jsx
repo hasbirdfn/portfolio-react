@@ -9,6 +9,7 @@ const Reveal = ({ children, width = 'fit-content' }) => {
 
     const mainControls = useAnimation()
 
+    // Mulai animasi saat elemen terlihat
     useEffect(() => {
         if (isInView) {
             mainControls.start('visible')
@@ -20,12 +21,12 @@ const Reveal = ({ children, width = 'fit-content' }) => {
 
         <motion.div
         variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 }, 
+            hidden: { opacity: 0, y: 75 }, // Elemen tersembunyi
+            visible: { opacity: 1, y: 0 }, // Elemen terlihat
         }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        initial="hidden"  // Mulai dari status "hidden"
+        animate={mainControls}  // Animasi berubah sesuai kontrol 
+        transition={{ duration: 0.5, delay: 0.25 }}  // Durasi dan delay animasi
         >
             {children}
         </motion.div>
@@ -35,3 +36,8 @@ const Reveal = ({ children, width = 'fit-content' }) => {
 }
 
 export default Reveal
+/* 
+    Cara Kerja Reveal
+    1. useInView: Mengecek apakah elemen pada ref terlihat di layar.
+    2. useAnimation: Mengontrol status animasi (dari hidden ke visible).
+*/
