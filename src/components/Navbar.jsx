@@ -6,6 +6,8 @@ import hasbcodelogo from "../assets/hasbcodelogo.png"; // Import gambar
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
+    
+    // toogle responsive mobile
     const toggleNav = () => {
         setNav(!nav)
     }
@@ -14,9 +16,10 @@ const Navbar = () => {
         setNav(false)
     }
 
+    // Animation Nav use Framermotion
     const menuVariants = {
         open: {
-            x: 0,
+            x: 0, //horizontal
             transition: {
                 stiffness: 20,
                 damping: 15
@@ -45,7 +48,7 @@ const Navbar = () => {
                 {/* Menu List */}
                 <ul className='hidden md:flex gap-12 z-10 cursor-pointer'>
                     <li><Link to="hero" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Home</Link></li>
-                    <li><Link to="hero" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">About</Link></li>
+                    <li><Link to="about" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">About</Link></li>
                     <li><Link to="skills" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Skills</Link></li>
                     <li><Link to="portfolio" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Portfolio</Link></li>
                     <li><Link to="experience" smooth={true} offset={50} duration={500} className="hover:underline decoration-purple-500">Experience</Link></li>
@@ -66,7 +69,7 @@ const Navbar = () => {
                 >
                     <ul className='font-semibold text-4xl space-y-8 mt-24 text-center'>
                         <li><Link to="hero" onClick={closeNav} smooth={true} offset={50} duration={500} className="hover:underline hover:text-purple-500">Home</Link></li>
-                        <li><Link to="hero" onClick={closeNav} smooth={true} offset={50} duration={500} className="hover:underline hover:text-purple-500">About</Link></li>
+                        <li><Link to="about" onClick={closeNav} smooth={true} offset={50} duration={500} className="hover:underline hover:text-purple-500">About</Link></li>
                         <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500} className="hover:underline hover:text-purple-500">Skills</Link></li>
                         <li><Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500} className="hover:underline hover:text-purple-500">Portfolio</Link></li>
                         <li><Link to="experience" onClick={closeNav} smooth={true} offset={50} duration={500} className="hover:underline hover:text-purple-500">Experience</Link></li>
@@ -79,3 +82,11 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+/*
+fixed top-0 left-0 w-full bg-opacity-70 backdrop-blur-md z-50
+=> Penjelasan kode tailwind ini :
+1.positionf dikasih fixed agar menempel diatas, ketika scroll akan mengikuti;
+2. top-0, left-0 agar ketika discroll posisi diatas
+
+*/

@@ -41,10 +41,7 @@ const Contact = () => {
                 </h3>
                 <p className="text-justify leading-7 mx-auto">
                   I'am create impactful web
-                  applications. With strong Front End Developer. I strive to
-                  deliver solutions that prioritize user experience and
-                  accessibility. I enjoy learning from others and continuously
-                  improving my skills.
+                  applications, and i was also active in organization, beingthe head of campus organizations, or communities during my college years
                 </p>
               </div>
 
